@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumnos</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="card col-8 offset-2 g-3">
+                <br>
+                <form class="mb-3 needs-validation" novalidate>
+                    <div class="row text-center">
+                        <h3>Registro de alumnos para contacto</h2>
+                        <div class="col-6 mb-3">
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="bi bi-person-fill"></i>
+                                </span><!--text-->
+                                <input type="text" required id="txtNombre" class="form-control" placeholder="Nombre(s)">
+                            </div><!--input group-->
+                        </div><!--nombre-->
+                        <div class="col-6 mb-3">
+                            <div class="input-group">
+                                <input type="text" required id="txtApellidos" class="form-control" placeholder="Apellidos">
+                            </div><!--input-group-->
+                        </div><!--apellidos-->
+                    </div><!--row nombre mail-->
+                    <div class="row">
+                        <div class=" col-6 mb-3">
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="bi bi-briefcase-fill"></i>
+                                </span>
+                                <input type="text" required id="txtCarrera" class="form-control" placeholder="Carrera">
+                            </div><!--input group-->
+                        </div><!--carrera-->
+                        <div class="col-6 mb-3">
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="bi bi-telephone-fill"></i>
+                                </span>
+                                <input type="text" required  id="txtTelefono" class="form-control" placeholder="Teléfono">
+                            </div><!--input group-->
+                        </div><!-- telefono-->
+                    </div><!--carrera telefono-->
+                    <div class="row">
+                        <div class="col-6 mb-3">
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="bi bi-envelope-at-fill"></i>
+                                </span>
+                                <input type="text" required  id="txtEmail" class="form-control" placeholder="E-mail">
+                            </div><!--input group-->
+                        </div><!-- email-->
+                    </div><!--row-->
+                    <div class="row justify-content-center">
+                        <div class="col-12 text-center">
+                            <input type="button" class="btn mb-3 col-5  btn-secondary"  id="btnSubmit" value="Enviar"></i>
+                        </div><!--submit-->
+
+                    </div><!--submit cMPOS-->
+                </form>
+            </div><!--card--> 
+        </div><!--main row-->
+    </div><!--container formulario-->
+    <br>
+    <hr>
+    <br>
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Correo </th>
+                    <th>Carrera</th>
+                    <th>Teléfono</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody id="cuerpoTabla">
+
+            </tbody>
+        </table>
+
+    </div><!--container-->
+    <div class="container">
+        <div class="modal fade " data-bs-keyboard="false" data-bs-backdrop="static" id="form-update">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Editar datos de  alumno</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div><!--modal header-->
+                        <div class="modal-body">
+                            <form class="mb-3 needs-validation" novalidate>
+                                <div class="row text-center">
+                                    <h3>Registro de alumnos para contacto</h2>
+                                    <div class="col-6 mb-3">
+                                        <div class="input-group">
+                                            <span class="input-group-text">
+                                                <i class="bi bi-person-fill"></i>
+                                            </span><!--text-->
+                                            <input type="text" required id="txtNombreModal" class="form-control" placeholder="Nombre(s)">
+                                        </div><!--input group-->
+                                    </div><!--nombre-->
+                                    <div class="col-6 mb-3">
+                                        <div class="input-group">
+                                            <input type="text" required id="txtApellidosModal" class="form-control" placeholder="Apellidos">
+                                        </div><!--input-group-->
+                                    </div><!--apellidos-->
+                                </div><!--row nombre mail-->
+                                <div class="row">
+                                    <div class=" col-6 mb-3">
+                                        <div class="input-group">
+                                            <span class="input-group-text">
+                                                <i class="bi bi-briefcase-fill"></i>
+                                            </span>
+                                            <input type="text" required id="txtCarreraModal" class="form-control" placeholder="Carrera">
+                                        </div><!--input group-->
+                                    </div><!--carrera-->
+                                    <div class="col-6 mb-3">
+                                        <div class="input-group">
+                                            <span class="input-group-text">
+                                                <i class="bi bi-telephone-fill"></i>
+                                            </span>
+                                            <input type="text" required  id="txtTelefonoModal" class="form-control" placeholder="Teléfono">
+                                        </div><!--input group-->
+                                    </div><!-- telefono-->
+                                </div><!--carrera telefono-->
+                                <div class="row">
+                                    <div class="col-6 mb-3">
+                                        <div class="input-group">
+                                            <span class="input-group-text">
+                                                <i class="bi bi-envelope-at-fill"></i>
+                                            </span>
+                                            <input type="text" required  id="txtEmailModal" class="form-control" placeholder="E-mail">
+                                        </div><!--input group-->
+                                    </div><!-- email-->
+                                </div><!--row-->
+                                <div class="row justify-content-center">
+                                    <div class="col-12 text-center">
+                                        <input type="button" class="btn mb-3 col-5  btn-secondary"  id="btnSubmit" value="Enviar"></i>
+                                    </div><!--submit-->
+            
+                                </div><!--submit cMPOS-->
+                            </form>
+                        </div><!--modal body-->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-primary" id="btnActualizar" >Guardar cambios</button>
+
+                        </div><!--modal footer-->
+                </div><!--modal content-->
+            </div><!--modal dialog-->
+        </div><!--main modal-->
+    </div><!--container modal-->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/scriptForms.js"></script>
+    <script type="text/javascript" src=""></script>
+</body>
+</html>
